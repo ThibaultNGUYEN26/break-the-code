@@ -1,0 +1,79 @@
+.room-button {
+  padding: 18px 40px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #1a1a2e;
+  border: 2px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.room-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.room-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.room-button.create {
+  background-color: #d4af37;
+  border-color: #f0d674;
+  box-shadow:
+    0 0 20px rgba(212, 175, 55, 0.4),
+    0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.room-button.create:hover {
+  background-color: #f0d674;
+  box-shadow:
+    0 0 30px rgba(212, 175, 55, 0.7),
+    0 4px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.room-button.join {
+  background-color: #8b0000;
+  border-color: #c41e1e;
+  color: #e8e6d9;
+  box-shadow:
+    0 0 20px rgba(139, 0, 0, 0.4),
+    0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.room-button.join:hover {
+  background-color: #a01010;
+  box-shadow:
+    0 0 30px rgba(139, 0, 0, 0.7),
+    0 4px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.room-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  transform: none;
+}
+
+.room-button:disabled:hover {
+  background-color: inherit;
+  transform: none;
+}
