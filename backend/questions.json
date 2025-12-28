@@ -1,0 +1,172 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "category": "count",
+      "text": "Combien de chiffres sont pairs ?",
+      "answer_type": "number"
+    },
+    {
+      "id": "Q2",
+      "category": "count",
+      "text": "Combien de chiffres sont impairs ?",
+      "answer_type": "number"
+    },
+    {
+      "id": "Q3",
+      "category": "count",
+      "text": "Combien de chiffres sont strictement supérieurs à X ?",
+      "answer_type": "number",
+      "params": ["X"]
+    },
+    {
+      "id": "Q4",
+      "category": "count",
+      "text": "Combien de chiffres sont strictement inférieurs à X ?",
+      "answer_type": "number",
+      "params": ["X"]
+    },
+    {
+      "id": "Q5",
+      "category": "count",
+      "text": "Combien de chiffres sont égaux à X ?",
+      "answer_type": "number",
+      "params": ["X"]
+    },
+
+    {
+      "id": "Q6",
+      "category": "position",
+      "text": "Le chiffre en position P est-il pair ?",
+      "answer_type": "boolean",
+      "params": ["P"]
+    },
+    {
+      "id": "Q7",
+      "category": "position",
+      "text": "Le chiffre en position P est-il impair ?",
+      "answer_type": "boolean",
+      "params": ["P"]
+    },
+    {
+      "id": "Q8",
+      "category": "position",
+      "text": "Le chiffre en position P est-il supérieur à X ?",
+      "answer_type": "boolean",
+      "params": ["P", "X"]
+    },
+    {
+      "id": "Q9",
+      "category": "position",
+      "text": "Le chiffre en position P est-il inférieur à X ?",
+      "answer_type": "boolean",
+      "params": ["P", "X"]
+    },
+    {
+      "id": "Q10",
+      "category": "position",
+      "text": "Le chiffre en position P est-il égal à X ?",
+      "answer_type": "boolean",
+      "params": ["P", "X"]
+    },
+
+    {
+      "id": "Q11",
+      "category": "comparison",
+      "text": "Le chiffre en position P1 est-il supérieur à celui en position P2 ?",
+      "answer_type": "boolean",
+      "params": ["P1", "P2"]
+    },
+    {
+      "id": "Q12",
+      "category": "comparison",
+      "text": "Le chiffre en position P1 est-il inférieur à celui en position P2 ?",
+      "answer_type": "boolean",
+      "params": ["P1", "P2"]
+    },
+
+    {
+      "id": "Q13",
+      "category": "order",
+      "text": "Les chiffres sont-ils en ordre strictement croissant ?",
+      "answer_type": "boolean"
+    },
+    {
+      "id": "Q14",
+      "category": "order",
+      "text": "Les chiffres sont-ils en ordre strictement décroissant ?",
+      "answer_type": "boolean"
+    },
+
+    {
+      "id": "Q15",
+      "category": "duplicates",
+      "text": "Y a-t-il au moins deux chiffres identiques ?",
+      "answer_type": "boolean"
+    },
+    {
+      "id": "Q16",
+      "category": "duplicates",
+      "text": "Tous les chiffres sont-ils différents ?",
+      "answer_type": "boolean"
+    },
+    {
+      "id": "Q17",
+      "category": "duplicates",
+      "text": "Combien de chiffres sont identiques entre eux ?",
+      "answer_type": "number"
+    },
+
+    {
+      "id": "Q18",
+      "category": "math",
+      "text": "La somme des chiffres est-elle paire ?",
+      "answer_type": "boolean"
+    },
+    {
+      "id": "Q19",
+      "category": "math",
+      "text": "La somme des chiffres est-elle impaire ?",
+      "answer_type": "boolean"
+    },
+    {
+      "id": "Q20",
+      "category": "math",
+      "text": "La somme des chiffres est-elle supérieure à X ?",
+      "answer_type": "boolean",
+      "params": ["X"]
+    },
+    {
+      "id": "Q21",
+      "category": "math",
+      "text": "La somme des chiffres est-elle inférieure à X ?",
+      "answer_type": "boolean",
+      "params": ["X"]
+    },
+    {
+      "id": "Q22",
+      "category": "math",
+      "text": "Le produit des chiffres est-il pair ?",
+      "answer_type": "boolean"
+    },
+
+    {
+      "id": "Q23",
+      "category": "existence",
+      "text": "Y a-t-il au moins un chiffre pair ?",
+      "answer_type": "boolean"
+    },
+    {
+      "id": "Q24",
+      "category": "existence",
+      "text": "Y a-t-il au moins un chiffre impair ?",
+      "answer_type": "boolean"
+    },
+    {
+      "id": "Q25",
+      "category": "existence",
+      "text": "Y a-t-il plus de chiffres pairs que de chiffres impairs ?",
+      "answer_type": "boolean"
+    }
+  ]
+}

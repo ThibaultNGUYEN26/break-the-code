@@ -1,6 +1,6 @@
 import './WaitingRoom.css'
 
-function WaitingRoom({ currentRoom, username, players, isHost, loading, onStartGame }) {
+function WaitingRoom({ currentRoom, username, players, isHost, loading, onStartGame, onLeaveRoom }) {
   return (
     <div style={{ marginTop: '40px' }}>
       <p style={{
@@ -32,14 +32,24 @@ function WaitingRoom({ currentRoom, username, players, isHost, loading, onStartG
           </div>
           {isHost && (
             <>
-              <button
-                onClick={onStartGame}
-                className="submit-username-btn"
-                style={{ marginTop: '20px', opacity: players.length < 2 ? 0.5 : 1 }}
-                disabled={loading || players.length < 2}
-              >
-                {loading ? 'STARTING...' : 'START GAME'}
-              </button>
+              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '20px' }}>
+                <button
+                  onClick={onStartGame}
+                  className="submit-username-btn"
+                  style={{ flex: 1, opacity: players.length < 2 ? 0.5 : 1 }}
+                  disabled={loading || players.length < 2}
+                >
+                  {loading ? 'STARTING...' : 'START GAME'}
+                </button>
+                <button
+                  onClick={onLeaveRoom}
+                  className="submit-username-btn"
+                  style={{ flex: 1, backgroundColor: '#ff4444', color: '#fff' }}
+                  disabled={loading}
+                >
+                  LEAVE ROOM
+                </button>
+              </div>
               {players.length < 2 && (
                 <p style={{ color: '#ff6b6b', fontSize: '0.85em', marginTop: '10px' }}>
                   Need at least 2 agents to start mission
@@ -51,6 +61,16 @@ function WaitingRoom({ currentRoom, username, players, isHost, loading, onStartG
             <p style={{ color: '#8a8a7a', fontSize: '0.9em', marginTop: '20px' }}>
               Waiting for host to start the game...
             </p>
+          )}
+          {!isHost && (
+            <button
+              onClick={onLeaveRoom}
+              className="submit-username-btn"
+              style={{ marginTop: '30px', backgroundColor: '#ff4444', color: '#fff' }}
+              disabled={loading}
+            >
+              LEAVE ROOM
+            </button>
           )}
         </div>
       </div>

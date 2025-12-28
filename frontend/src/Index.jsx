@@ -288,6 +288,21 @@ function Index() {
             isHost={isHost}
             loading={loading}
             onStartGame={handleStartGame}
+            onLeaveRoom={() => {
+              if (socketRef.current && currentRoom) {
+                setLoading(true);
+                socketRef.current.emit('leave_room', { room: currentRoom });
+                setRoomCreated(false);
+                setRoomSelected(false);
+                setShowCreateRoomInput(false);
+                setCurrentRoom('');
+                setPlayers([]);
+                setIsHost(false);
+                setGameStarted(false);
+                setSecret(null);
+                setError(null);
+              }
+            }}
           />
         )}
 
